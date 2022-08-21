@@ -79,6 +79,12 @@ describe('telnyx.com test suite', () => {
     })
 
     it('Registration with valid credentials', () => {
+        cy.clearCookies()
+        cy.clearLocalStorage()
+
+        cy.visit('https://telnyx.com/')
+        mainPage.closeButton() //close alert window
+
         mainPage.signUpButton()
 
         signUpPage.fillEmail(random+"@gmail.com")
@@ -149,7 +155,11 @@ describe('telnyx.com test suite', () => {
     })
 
     it('Remember my email address function check', () => {
+        cy.clearCookies()
+        cy.clearLocalStorage()
+
         cy.visit('https://telnyx.com/')
+        mainPage.closeButton() //close alert window
 
         mainPage.logInButton()
 
