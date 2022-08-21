@@ -40,6 +40,9 @@ passwordNotif3() {
 passwordNotif4() {
     return cy.get('#password_requirements > div:nth-child(5)')
 }
+emailSendNotif() {
+    return cy.get('div.sc-62badcbb-0.gQAeUA > main > div > h1')
+}
 }
 
 export default SignUpPage
