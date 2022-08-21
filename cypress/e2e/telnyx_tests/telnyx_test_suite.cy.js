@@ -88,9 +88,9 @@ describe('telnyx.com test suite', () => {
         signUpPage.createAccButton()
 
         cy.wait(10000)
-        cy.url().should('eq', 'https://telnyx.com/sign-up/verify-email/f')
+        cy.url().should('eq', 'https://telnyx.com/sign-up')
         signUpPage.emailSendNotif().should('have.text', "We've sent you an email to activate your account")
-        //cy.get('div.sc-62badcbb-0.gQAeUA > main > div > h1').contains("We've sent you an email to activate your account")
+
     })
 
     it('Registration with not valid credentials', () => {
