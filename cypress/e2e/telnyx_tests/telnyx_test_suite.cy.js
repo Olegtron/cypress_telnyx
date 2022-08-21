@@ -79,9 +79,6 @@ describe('telnyx.com test suite', () => {
     })
 
     it('Registration with valid credentials', () => {
-        cy.clearCookies()
-        cy.clearLocalStorage()
-
         mainPage.signUpButton()
 
         signUpPage.fillEmail(random+"@gmail.com")
@@ -91,7 +88,7 @@ describe('telnyx.com test suite', () => {
         signUpPage.createAccButton()
 
         cy.wait(10000)
-        cy.url().should('eq', 'https://telnyx.com/sign-up')
+        cy.url().should('eq', 'https://telnyx.com/sign-up/verify-email/f')
         signUpPage.emailSendNotif().should('have.text', "We've sent you an email to activate your account")
     })
 
@@ -152,9 +149,6 @@ describe('telnyx.com test suite', () => {
     })
 
     it('Remember my email address function check', () => {
-        cy.clearCookies()
-        cy.clearLocalStorage()
-
         mainPage.logInButton()
 
         loginPage.fillEmail("kusoushimatta@gmail.com")
