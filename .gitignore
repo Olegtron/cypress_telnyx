@@ -3,6 +3,5 @@ cypress/fixtures
 cypress/screenshots
 cypress/videos
 node_modules
-commands.js
+ccommands.js
 commands.md
-cypress/support
