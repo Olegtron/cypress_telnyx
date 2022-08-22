@@ -149,6 +149,7 @@ describe('telnyx.com test suite', () => {
     })
 
     it('Remember my email address function check', () => {
+        cy.visit('https://telnyx.com/')
         mainPage.logInButton()
 
         loginPage.fillEmail("kusoushimatta@gmail.com")
