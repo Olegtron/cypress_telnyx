@@ -22,4 +22,5 @@ npm install cypress --save-dev
 - Open the project folder in VSCode or another IDE
 
 Tests located in: cypress/e2e/telnyx_tests/*.cy.js
+
 Page objects located in:cypress/e2e/telnyx_pageobjects/*.js
