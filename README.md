@@ -32,3 +32,4 @@ node_modules/.bin/cypress open
 ```
 - In opened window click on **E2E Testing**
 - Choose browser that you want and click **Start E2E Testing** button
+- In opened new window click on **Specs** and click on **telnyx_test_suite.cy.js** spec
