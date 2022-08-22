@@ -23,6 +23,10 @@ releaseNotesButton(){
     const releaseNotesButton = cy.get('div:nth-child(2) > div > ul > li:nth-child(4) > a > span > span')
     releaseNotesButton.click()
 }
+acceptCookies(){
+    const acceptCookies = cy.get('.sc-62badcbb-0.gQAeUA > div > div > div > div:nth-child(1) > button')
+    acceptCookies.click()
+}
 
 //Navigation Bar elements
 navBarElem1() {

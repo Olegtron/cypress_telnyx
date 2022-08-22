@@ -5,4 +5,3 @@ cypress/videos
 node_modules
 ccommands.js
 commands.md
-cypress/e2e/telnyx_tests/telnyx_test_suite.cy.js

@@ -32,7 +32,7 @@ describe('telnyx.com test suite', () => {
         },
         () => {
             cy.visit('https://telnyx.com/')
-            mainPage.closeButton() //close alert window
+            mainPage.acceptCookies()
             mainPage.signUpButton()
 
             signUpPage.fillEmail(random+"@gmail.com")
