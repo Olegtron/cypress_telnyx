@@ -8,3 +8,12 @@ Tutorial project for learning Cypress
 ```
 npm install
 ```
+```
+npm init -y
+```
+```
+cd /your/project/path
+```
+```
+npm install cypress --save-dev
+```
