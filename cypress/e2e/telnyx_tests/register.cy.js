@@ -7,12 +7,7 @@ import AccountPage from '../telnyx_pageobjects/AccountPage'
 import ProductPage from '../telnyx_pageobjects/ProductPage'
 import ReleaseNotesPage from '../telnyx_pageobjects/ReleaseNotesPage'
 
-describe('telnyx.com test suite', () => {
-
-    afterEach(() => {
-        cy.clearCookies()
-        cy.clearLocalStorage()
-    })
+describe('reg', () => {
 
     const random = Math.random().toString(36).substring(4,14);
     const mainPage = new MainPage()
@@ -41,9 +36,12 @@ describe('telnyx.com test suite', () => {
             signUpPage.check()
             signUpPage.createAccButton()
     
-            cy.wait(10000)
+            cy.wait(7000)
             cy.url().should('eq', 'https://telnyx.com/sign-up/verify-email/f')
             signUpPage.emailSendNotif().should('have.text', "We've sent you an email to activate your account")
+
+            cy.clearCookies()
+            cy.clearLocalStorage()
         }
       )
 
