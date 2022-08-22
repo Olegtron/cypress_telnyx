@@ -17,10 +17,18 @@ cd /your/project/path
 ```
 npm install cypress --save-dev
 ```
-**Running project**
+**Project opening**
 - Download or clone project from repository
 - Open the project folder in VSCode or another IDE
 
 Tests located in: cypress/e2e/telnyx_tests/*.cy.js
 
 Page objects located in: cypress/e2e/telnyx_pageobjects/*.js
+
+**Project Run**
+- Launch Cypress with the following commands in the terminal:
+```
+node_modules/.bin/cypress open
+```
+- In opened window click on **E2E Testing**
+- Choose browser that you want and click **Start E2E Testing** button
