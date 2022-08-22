@@ -23,4 +23,4 @@ npm install cypress --save-dev
 
 Tests located in: cypress/e2e/telnyx_tests/*.cy.js
 
-Page objects located in:cypress/e2e/telnyx_pageobjects/*.js
+Page objects located in: cypress/e2e/telnyx_pageobjects/*.js
