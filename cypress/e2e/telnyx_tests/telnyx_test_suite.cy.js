@@ -79,7 +79,7 @@ describe('telnyx.com test suite', () => {
         mainPage.footerElem39().should('be.visible').should('have.text', 'Follow on Facebook ')
     })
 
-    /*it(
+    it(
         'Registration with valid credentials',
         {
           retries: {
@@ -100,7 +100,7 @@ describe('telnyx.com test suite', () => {
             cy.url().should('eq', 'https://telnyx.com/sign-up/verify-email/f')
             signUpPage.emailSendNotif().should('have.text', "We've sent you an email to activate your account")
         }
-      )*/
+      )
 
 
 
