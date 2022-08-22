@@ -8,6 +8,7 @@ import ProductPage from '../telnyx_pageobjects/ProductPage'
 import ReleaseNotesPage from '../telnyx_pageobjects/ReleaseNotesPage'
 
 describe('telnyx.com test suite', () => {
+
     afterEach(() => {
         cy.clearCookies()
         cy.clearLocalStorage()
@@ -78,7 +79,32 @@ describe('telnyx.com test suite', () => {
         mainPage.footerElem39().should('be.visible').should('have.text', 'Follow on Facebook ')
     })
 
-    it('Registration with valid credentials', () => {
+    it(
+        'Registration with valid credentials',
+        {
+          retries: {
+            runMode: 10,
+            openMode: 10,
+          },
+        },
+        () => {
+            mainPage.signUpButton()
+
+            signUpPage.fillEmail(random+"@gmail.com")
+            signUpPage.fillName(random)
+            signUpPage.fillPass(random+"A288a@")
+            signUpPage.check()
+            signUpPage.createAccButton()
+    
+            cy.wait(10000)
+            cy.url().should('eq', 'https://telnyx.com/sign-up/verify-email/f')
+            signUpPage.emailSendNotif().should('have.text', "We've sent you an email to activate your account")
+        }
+      )
+
+
+
+    /*it('Registration with valid credentials', () => {
         mainPage.signUpButton()
 
         signUpPage.fillEmail(random+"@gmail.com")
@@ -90,7 +116,7 @@ describe('telnyx.com test suite', () => {
         cy.wait(10000)
         cy.url().should('eq', 'https://telnyx.com/sign-up/verify-email/f')
         signUpPage.emailSendNotif().should('have.text', "We've sent you an email to activate your account")
-    })
+    })*/
 
     it('Registration with not valid credentials', () => {
         cy.visit('https://telnyx.com/')
